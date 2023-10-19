@@ -10,11 +10,15 @@ const TodoList = () => {
       setNewTask("");
     }
   };
-  const handleDeleteTask = (index) => {
-    const updatedTasks = [...tasks];
-    updatedTasks.splice(index, 1);
-    setTasks(updatedTasks);
-  };
+  // const handleDeleteTask = (index) => {
+  //   const updatedTasks = [...tasks];
+  //   updatedTasks.splice(index, 1);
+  //   setTasks(updatedTasks);
+  // };
+  const handleDeleteTask =()=>{
+  const filterData = tasks.filter((index , i)=> i !== index);
+    setTasks(filterData);
+  }
   return (
     <div>
       <h2>Todo List</h2>
