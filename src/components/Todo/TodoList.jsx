@@ -10,13 +10,11 @@ const TodoList = () => {
       setNewTask("");
     }
   };
-
   const handleDeleteTask = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
   };
-
   return (
     <div>
       <h2>Todo List</h2>
